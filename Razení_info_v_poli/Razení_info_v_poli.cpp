@@ -15,6 +15,19 @@ void výpis(int *x, int y) {
 	printf("\n");
 }
 
+void vyskyt(int *x) {
+	int cislo;
+	int pocet[5] = { 0,0,0,0,0 };
+	for (int i = 0; i < 5; i++) {
+		cislo = x[i];
+		pocet[cislo]++;
+	}
+	printf("Cislo - pocet vyskytu:\n");
+	for (int j = 0; j < 5; j++) {
+		printf("%d - %dx\n", j, pocet[j]);
+	}
+}
+
 int main() {
 	int pole1[5] = { 2,4,3,2,1 };
 	int pole2[5] = { 0,1,4,3,2 };
@@ -36,6 +49,11 @@ int main() {
 	výpis(&pole2, 5);
 	printf("\n");
 
-
-
+	printf("POLE1: ");
+	vyskyt(&pole1);
+	printf("\n");
+	printf("POLE2: ");
+	vyskyt(&pole2);
+	printf("\n");
+	printf("POLE2: ");
 }
