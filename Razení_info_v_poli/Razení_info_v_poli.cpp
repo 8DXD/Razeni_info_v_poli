@@ -28,29 +28,21 @@ void vyskyt(int *x) {
 	}
 }
 
-void vyskyt2(int* x) {
-	int  cislo2 = 0;
-	int pocet[10] = { 0,0,0,0,0,0,0,0,0,0 };
+void celkem(int *x, int *y) {
+	int  cisla = 0;
+	int pocet[5] = { 0,0,0,0,0 };
 	for (int i = 0; i < 10; i++) {
-		cislo2 = x[i];
-		pocet[cislo2]++;
+		cisla = x[i];
+		pocet[cisla]++;
+	}
+	for (int i = 0; i < 10; i++) {
+		cisla = y[i];
+		pocet[cisla]++;
 	}
 	printf("Cislo - pocet vyskytu:\n");
-	for (int j = 0; j < 10; j++) {
+	for (int j = 0; j < 5; j++) {
 		printf("%d - %dx\n", j, pocet[j]);
 	}
-}
-
-void celkem(int *x, int *y) {
-	long POLE[10];
-	for (int i = 0; i < 1; i++) {
-		POLE[i]= x[i];
-	}
-	for (int j = 0; j < 6; j++) {
-		POLE[j+5] = y[j];
-	}
-	výpis(&POLE, 10);
-	//vyskyt2(&POLE);
 }
 
 int main() {
